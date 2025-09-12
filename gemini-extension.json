@@ -1,0 +1,24 @@
+{
+  "name": "Cloud SQL for SQL Server",
+  "version": "0.1.0",
+  "description": "Connect to Cloud SQL for SQL Server",
+  "mcpServers": {
+    "Cloud SQL for SQL Server": {
+      "command": "${extensionPath}${/}toolbox",
+      "args": [
+        "--prebuilt",
+        "cloud-sql-mssql",
+        "--stdio"
+      ],
+      "env": {
+        "CLOUD_SQL_SQLSERVER_PROJECT": "${CLOUD_SQL_SQLSERVER_PROJECT}",
+        "CLOUD_SQL_SQLSERVER_REGION": "${CLOUD_SQL_SQLSERVER_REGION}",
+        "CLOUD_SQL_SQLSERVER_INSTANCE": "${CLOUD_SQL_SQLSERVER_INSTANCE}",
+        "CLOUD_SQL_SQLSERVER_DATABASE": "${CLOUD_SQL_SQLSERVER_DATABASE}",
+        "CLOUD_SQL_SQLSERVER_USER": "${CLOUD_SQL_SQLSERVER_USER}",
+        "CLOUD_SQL_SQLSERVER_PASSWORD": "${CLOUD_SQL_SQLSERVER_PASSWORD}"
+      }
+    }
+  },
+  "contextFileName": "CLOUD-SQL-SQLSERVER.md"
+}
