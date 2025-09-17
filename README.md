@@ -14,7 +14,8 @@ Before you begin, ensure you have the following:
 
 * [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed.
 * A Google Cloud project with the **Cloud SQL Admin API** enabled.
-* IAM Permissions
+* IAM Permissions:
+  * Cloud SQL Client (`roles/cloudsql.client`)
 
 ## Installation
 
