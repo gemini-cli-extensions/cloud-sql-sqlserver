@@ -22,7 +22,7 @@ Before you begin, ensure you have the following:
 To install the extension, use the command:
 
 ```bash
-gemini extensions install github.com/gemini-cli-extensions/cloud-sql-sqlserver.git
+gemini extensions install github.com/gemini-cli-extensions/cloud-sql-sqlserver
 ```
 
 ## Configuration
