@@ -37,6 +37,9 @@ Set the following environment variables before starting the Gemini CLI:
 * `CLOUD_SQL_MSSQL_USER`: The database username.
 * `CLOUD_SQL_MSSQL_PASSWORD`: The password for the database user.
 
+> [!NOTE]
+> When using private IPs with Cloud SQL for SQL Server, you must use a Virtual Private Cloud (VPC) network.
+
 ## Usage Examples
 
 Interact with Cloud SQL for SQL Server using natural language right from your IDE:
