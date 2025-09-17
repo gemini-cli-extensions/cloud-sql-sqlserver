@@ -27,6 +27,8 @@ gemini extensions install github.com/gemini-cli-extensions/cloud-sql-sqlserver
 
 ## Configuration
 
+Set the following environment variables before starting the Gemini CLI:
+
 * `CLOUD_SQL_MSSQL_PROJECT`: The GCP project ID.
 * `CLOUD_SQL_MSSQL_REGION`: The region of your Cloud SQL instance.
 * `CLOUD_SQL_MSSQL_INSTANCE`: The ID of your Cloud SQL instance.
