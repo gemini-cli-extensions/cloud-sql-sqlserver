@@ -36,6 +36,7 @@ Set the following environment variables before starting the Gemini CLI:
 * `CLOUD_SQL_MSSQL_IP_ADDRESS`: The IP address of the Cloud SQL instance.
 * `CLOUD_SQL_MSSQL_USER`: The database username.
 * `CLOUD_SQL_MSSQL_PASSWORD`: The password for the database user.
+* `CLOUD_SQL_MSSQL_IP_TYPE`: (Optional) The IP type i.e. “Public” or “Private” (Default: Public).
 
 ## Usage Examples
 
@@ -50,8 +51,8 @@ Interact with Cloud SQL for SQL Server using natural language right from your ID
 
 ## Supported Tools
 
-* `list-tables`: Use this tool to list tables and descriptions.
-* `execute-sql`: Use this tool to execute any SQL statement.
+* `list_tables`: Use this tool to list tables and descriptions.
+* `execute_sql`: Use this tool to execute any SQL statement.
 
 ## Additional Extensions
 
