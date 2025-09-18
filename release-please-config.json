@@ -10,7 +10,7 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "package-name": "alloydb",
+      "package-name": "cloud-sql-sqlserver",
       "extra-files": [
         {
           "type": "json",
