@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "description": "Connect to Cloud SQL for SQL Server",
   "mcpServers": {
+    "Cloud SQL for SQL Server Admin": {
+      "command": "${extensionPath}${/}toolbox",
+      "args": [
+        "--prebuilt",
+        "cloud-sql-mssql-admin",
+        "--stdio"
+      ]
+    },
     "Cloud SQL for SQL Server": {
       "command": "${extensionPath}${/}toolbox",
       "args": [
