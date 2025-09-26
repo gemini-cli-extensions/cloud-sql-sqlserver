@@ -35,4 +35,4 @@ This section covers administrative operations like managing clusters, instances,
     * For read-only operations (get/list), the **Cloud SQL Viewer** (`roles/cloudsql.viewer`) role is sufficient.
     * If an operation fails due to permissions, identify the type of operation and recommend the appropriate role. You can provide these links for assistance:
         * Granting Roles: https://cloud.google.com/iam/docs/grant-role-console
-        * Cloud SQL Permissions: https://cloud.google.com/sql/docs/postgres/iam-permissions
+        * Cloud SQL Permissions: https://cloud.google.com/sql/docs/sqlserver/iam-permissions

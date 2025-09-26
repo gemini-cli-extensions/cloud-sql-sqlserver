@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Connect to Cloud SQL for SQL Server",
   "mcpServers": {
-    "Cloud SQL for SQL Server Admin": {
+    "cloud_sql_sqlserver_admin": {
       "command": "${extensionPath}${/}toolbox",
       "args": [
         "--prebuilt",
@@ -11,7 +11,7 @@
         "--stdio"
       ]
     },
-    "Cloud SQL for SQL Server": {
+    "cloud_sql_sqlserver": {
       "command": "${extensionPath}${/}toolbox",
       "args": [
         "--prebuilt",
@@ -19,12 +19,12 @@
         "--stdio"
       ],
       "env": {
-        "CLOUD_SQL_SQLSERVER_PROJECT": "${CLOUD_SQL_SQLSERVER_PROJECT}",
-        "CLOUD_SQL_SQLSERVER_REGION": "${CLOUD_SQL_SQLSERVER_REGION}",
-        "CLOUD_SQL_SQLSERVER_INSTANCE": "${CLOUD_SQL_SQLSERVER_INSTANCE}",
-        "CLOUD_SQL_SQLSERVER_DATABASE": "${CLOUD_SQL_SQLSERVER_DATABASE}",
-        "CLOUD_SQL_SQLSERVER_USER": "${CLOUD_SQL_SQLSERVER_USER}",
-        "CLOUD_SQL_SQLSERVER_PASSWORD": "${CLOUD_SQL_SQLSERVER_PASSWORD}"
+        "CLOUD_SQL_MSSQL_PROJECT": "${CLOUD_SQL_MSSQL_PROJECT}",
+        "CLOUD_SQL_MSSQL_REGION": "${CLOUD_SQL_MSSQL_REGION}",
+        "CLOUD_SQL_MSSQL_INSTANCE": "${CLOUD_SQL_MSSQL_INSTANCE}",
+        "CLOUD_SQL_MSSQL_DATABASE": "${CLOUD_SQL_MSSQL_DATABASE}",
+        "CLOUD_SQL_MSSQL_USER": "${CLOUD_SQL_MSSQL_USER}",
+        "CLOUD_SQL_MSSQL_PASSWORD": "${CLOUD_SQL_MSSQL_PASSWORD}"
       }
     }
   },
