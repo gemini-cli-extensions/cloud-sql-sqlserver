@@ -12,6 +12,7 @@ Learn more about [Gemini CLI Extensions](https://github.com/google-gemini/gemini
 * **Seamless Workflow:** As a Google-developed extension, it integrates seamlessly into the Gemini CLI environment. No need to constantly switch contexts for common database tasks.
 * **Natural Language Management:** Stop wrestling with complex commands. Explore schemas and query data by describing what you want in plain English.
 * **Code Generation:** Accelerate development by asking Gemini to generate data classes and other code snippets based on your table schemas.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following:
@@ -27,7 +28,7 @@ Before you begin, ensure you have the following:
 
 ### Installation
 
-To install the extension, use the command:
+To install the extension, use the following command before starting the Gemini CLI:
 
 ```bash
 gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-sqlserver
@@ -50,7 +51,20 @@ This configuration is not required if utilizing the [Admin toolset](#supported-t
 Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
 
 > [!NOTE]
-> When using private IPs with Cloud SQL for SQL Server, you must use a Virtual Private Cloud (VPC) network.
+> If your Cloud SQL for SQL Server instance uses private IPs, you must run Gemini CLI in the same Virtual Private Cloud (VPC) network.
+
+### Start Gemini CLI
+
+To start the Gemini CLI, use the following command:
+
+```bash
+gemini
+```
+
+> [!WARNING]
+> **Changing Instance & Database Connections**
+> Currently, the database connection must be configured before starting the Gemini CLI and can not be changed during a session.
+> To save and resume conversation history use command: `/chat save <tag>` and `/chat resume <tag>`.
 
 ### Start Gemini CLI
 
@@ -82,9 +96,9 @@ Interact with Cloud SQL for SQL Server using natural language:
 ## Supported Tools
 
 *   **Admin:**
-   	* `create_instance`: Use this tool to create an Postgres instance.
-   	* `create_user`: Use this tool to create Postgres-BUILT-IN or IAM-based users.
-   	* `get_instance`: Use this tool to get details about an Postgres instance.
+   	* `create_instance`: Use this tool to create an SQL Server instance.
+   	* `create_user`: Use this tool to create SQL Server-BUILT-IN or IAM-based users.
+   	* `get_instance`: Use this tool to get details about an SQL Server instance.
    	* `get_user`: Use this tool to get details about a user.
    	* `list_instances`: Use this tool to list instances in a given project and location.
    	* `list_users`: Use this tool to list users in a given project and location.
@@ -96,7 +110,10 @@ Interact with Cloud SQL for SQL Server using natural language:
 
 ## Additional Extensions
 
-Find additional extensions to support your entire software development lifecycle at [github.com/gemini-cli-extensions](https://github.com/gemini-cli-extensions).
+Find additional extensions to support your entire software development lifecycle at [github.com/gemini-cli-extensions](https://github.com/gemini-cli-extensions), including:
+* [Generic SQL Server extension](https://github.com/gemini-cli-extensions/sql-server)
+* [Cloud SQL for SQL Server Observability extension](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability)
+* and more!
 
 ## Troubleshooting
 
