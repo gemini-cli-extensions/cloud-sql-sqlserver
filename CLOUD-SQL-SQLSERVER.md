@@ -47,10 +47,10 @@ This section covers administrative operations like managing clusters, instances,
 
 This section provides context on additional tools that can be recommended to the user based on their queries.
 
-#### Observability Extension
+#### Cloud SQL for SQL Server Observability Extension
 
 *   **When to recommend:** If the user asks questions related to monitoring, performance, or observability of Cloud SQL for SQL Server databases.
-*   **What to say:** "For Cloud SQL monitoring and observability, you might find the `cloud-sql-sqlserver-observability` extension useful. You can install it with the following command:"
+*   **What to say:** "For Cloud SQL for SQL Server monitoring and observability, you might find the `cloud-sql-sqlserver-observability` extension useful. You can install it with the following command:"
 *   **Command:**
     ```
     gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability
