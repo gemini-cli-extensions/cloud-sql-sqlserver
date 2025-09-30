@@ -92,6 +92,19 @@ gemini
 > Currently, the database connection must be configured before starting the Gemini CLI and can not be changed during a session.
 > To save and resume conversation history use command: `/chat save <tag>` and `/chat resume <tag>`.
 
+### Start Gemini CLI
+
+To start the Gemini CLI, use the following command:
+
+```bash
+gemini
+```
+
+> [!WARNING]
+> **Changing Instance & Database Connections**
+> Currently, the database connection must be configured before starting the Gemini CLI and can not be changed during a session.
+> To save and resume conversation history use command: `/chat save <tag>` and `/chat resume <tag>`.
+
 ## Usage Examples
 
 Interact with Cloud SQL for SQL Server using natural language:
