@@ -1,9 +1,9 @@
 {
   "name": "cloud-sql-sqlserver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Connect to Cloud SQL for SQL Server",
   "mcpServers": {
-    "Cloud SQL for SQL Server Admin": {
+    "cloud_sql_sqlserver_admin": {
       "command": "${extensionPath}${/}toolbox",
       "args": [
         "--prebuilt",
@@ -11,7 +11,7 @@
         "--stdio"
       ]
     },
-    "Cloud SQL for SQL Server": {
+    "cloud_sql_sqlserver": {
       "command": "${extensionPath}${/}toolbox",
       "args": [
         "--prebuilt",
