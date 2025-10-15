@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.1...0.1.2) (2025-10-13)
+
+
+### Features
+
+* add full table name to context file ([#35](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/35)) ([984b098](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/984b09830b67a346bf3d9222b88622bd37fa7415))
+* **deps:** update dependency googleapis/genai-toolbox to v0.17.0 ([#42](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/42)) ([946fc11](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/946fc11399c4131d3c3892c373e428accb90d172))
+
 ## [0.1.1](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.0...0.1.1) (2025-09-30)
 
 
