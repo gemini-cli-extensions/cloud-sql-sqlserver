@@ -6,6 +6,10 @@ software delivery cycle.
 
 # Setup
 
+## Required Gemini CLI Version
+
+To install this extension, the Gemini CLI version must be v0.6.0 or above. The version can be found by running: `gemini --version`.
+
 ## Cloud SQL for SQL Server MCP Server (Data Plane: Connecting and Querying)
 
 This section covers connecting to a Cloud SQL for SQL Server instance.
@@ -36,3 +40,52 @@ This section covers administrative operations like managing clusters, instances,
     * If an operation fails due to permissions, identify the type of operation and recommend the appropriate role. You can provide these links for assistance:
         * Granting Roles: https://cloud.google.com/iam/docs/grant-role-console
         * Cloud SQL Permissions: https://cloud.google.com/sql/docs/postgres/iam-permissions
+
+---
+
+# Additional Tools
+
+This section provides context on additional tools that can be recommended to the user based on their queries.
+
+#### Observability Extension
+
+*   **When to recommend:** If the user asks questions related to monitoring, performance, or observability of Cloud SQL for SQL Server databases.
+*   **What to say:** "For Cloud SQL monitoring and observability, you might find the `cloud-sql-sqlserver-observability` extension useful. You can install it with the following command. Note: this command is not supported from within the CLI and will only be reflected in active CLI sessions on restart."
+*   **Command:**
+    ```
+    gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability
+    ```
+
+---
+
+# Usage Guidelines
+
+## Connecting to New Resources
+
+When you create a new Cloud SQL for SQL Server instance, or database using the available tools, the connection is not automatically established. You will need to perform the following steps:
+
+1.  **(Optional) Save your conversation:** To avoid losing your progress, save the current session by running the command: `/chat save <your-tag>`
+2.  **Stop the CLI:** Terminate the Gemini CLI.
+3.  **Update Environment Variables:** Set or update your environment variables (e.g. `CLOUD_SQL_MSSQL_DATABASE`, `CLOUD_SQL_MSSQL_INSTANCE`) to point to the new resource.
+4.  **Restart:** Relaunch the Gemini CLI
+5.  **(Optional) Resume conversation:** Resume your conversation with the command: `/chat resume <your-tag>`
+
+**Important:** Do not assume a connection to a newly created resource is active. Always follow the steps above to reconfigure your connection.
+
+## Reusing Project Values
+
+Users may have set project environment variables:
+
+*   `CLOUD_SQL_MSSQL_PROJECT`: The GCP project ID.
+*   `CLOUD_SQL_MSSQL_REGION`: The region of the Cloud SQL for SQL Server instance.
+*   `CLOUD_SQL_MSSQL_INSTANCE`: The ID of the Cloud SQL for SQL Server instance.
+*   `CLOUD_SQL_MSSQL_DATABASE`: The name of the database.
+
+Instead of prompting the user for these values for specific tool calls, prompt the user to verify reuse a specific value.
+Make sure to not use the environment variable name like `CLOUD_SQL_MSSQL_PROJECT`, `${CLOUD_SQL_MSSQL_PROJECT}`, or `$CLOUD_SQL_MSSQL_PROJECT`. The value can be found by using command: `echo $CLOUD_SQL_MSSQL_PROJECT`.
+
+## Use Full Table Name Format "DATABASE_NAME.SCHEMA_NAME.TABLE_NAME"
+
+**ALWAYS** use the full table name format, `DATABASE_NAME.SCHEMA_NAME.TABLE_NAME` in the generated SQL when using the `execute_sql` or `cloud_sql_sqlserver__execute_sql` tool.
+* Default to using "dbo" for the schema name.
+* Use command `echo $CLOUD_SQL_MSSQL_DATABASE` to get the current database value.
