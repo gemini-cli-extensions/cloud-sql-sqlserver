@@ -48,14 +48,16 @@ gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-sql
 Set the following environment variables before starting the Gemini CLI. These variables can be loaded from a `.env` file.
 This configuration is not required if utilizing the [Admin toolset](#supported-tools).
 
-* `CLOUD_SQL_MSSQL_PROJECT`: The GCP project ID.
-* `CLOUD_SQL_MSSQL_REGION`: The region of your Cloud SQL instance.
-* `CLOUD_SQL_MSSQL_INSTANCE`: The ID of your Cloud SQL instance.
-* `CLOUD_SQL_MSSQL_DATABASE`: The name of the database to connect to.
-* `CLOUD_SQL_MSSQL_IP_ADDRESS`: The IP address of the Cloud SQL instance.
-* `CLOUD_SQL_MSSQL_USER`: The database username.
-* `CLOUD_SQL_MSSQL_PASSWORD`: The password for the database user.
-* `CLOUD_SQL_MSSQL_IP_TYPE`: (Optional) The IP type i.e. “Public” or “Private” (Default: Public).
+```bash
+export CLOUD_SQL_MSSQL_PROJECT="<your-gcp-project-id>"
+export CLOUD_SQL_MSSQL_REGION="<your-cloud-sql-region>"
+export CLOUD_SQL_MSSQL_INSTANCE="<your-cloud-sql-instance-id>"
+export CLOUD_SQL_MSSQL_DATABASE="<your-database-name>"
+export CLOUD_SQL_MSSQL_IP_ADDRESS="<your-instance-ip-address>"
+export CLOUD_SQL_MSSQL_USER="<your-database-user>"
+export CLOUD_SQL_MSSQL_PASSWORD="<your-database-password>"
+export CLOUD_SQL_MSSQL_IP_TYPE="PUBLIC" # Optional: `PUBLIC`, `PRIVATE`. Defaults to `PUBLIC`.
+```
 
 Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
 
