@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.2...0.1.3) (2025-10-17)
+
+
+### Bug Fixes
+
+* update context for install instructions ([#48](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/48)) ([3aa1575](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/3aa157557efeae1c22a20ac5461fc83b07787964))
+
 ## [0.1.2](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.1...0.1.2) (2025-10-13)
 
 
