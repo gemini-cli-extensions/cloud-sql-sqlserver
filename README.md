@@ -53,7 +53,6 @@ export CLOUD_SQL_MSSQL_PROJECT="<your-gcp-project-id>"
 export CLOUD_SQL_MSSQL_REGION="<your-cloud-sql-region>"
 export CLOUD_SQL_MSSQL_INSTANCE="<your-cloud-sql-instance-id>"
 export CLOUD_SQL_MSSQL_DATABASE="<your-database-name>"
-export CLOUD_SQL_MSSQL_IP_ADDRESS="<your-instance-ip-address>"
 export CLOUD_SQL_MSSQL_USER="<your-database-user>"
 export CLOUD_SQL_MSSQL_PASSWORD="<your-database-password>"
 export CLOUD_SQL_MSSQL_IP_TYPE="PUBLIC" # Optional: `PUBLIC`, `PRIVATE`. Defaults to `PUBLIC`.
