@@ -20,7 +20,6 @@ This section covers connecting to a Cloud SQL for SQL Server instance.
     * `CLOUD_SQL_MSSQL_REGION`: The region of your Cloud SQL instance.
     * `CLOUD_SQL_MSSQL_INSTANCE`: The ID of your Cloud SQL instance.
     * `CLOUD_SQL_MSSQL_DATABASE`: The name of the database to connect to.
-    * `CLOUD_SQL_MSSQL_IP_ADDRESS`: The IP address of the Cloud SQL instance.
     * `CLOUD_SQL_MSSQL_USER`: The database username.
     * `CLOUD_SQL_MSSQL_PASSWORD`: The password for the database user.
 
