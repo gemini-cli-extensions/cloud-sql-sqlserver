@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.4](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.3...0.1.4) (2025-11-07)
+
+
+### Features
+
+* remove `ipAddress` field as required parameter ([#62](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/62)) ([11fda36](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/11fda362fa7d0542846f07c0028fbc5ec49e9921))
+
+
+### Bug Fixes
+
+* **source/cloud-sql-mssql:** Remove `ipAddress` field ([genai-toolbox#​1822](https://redirect.github.com/googleapis/genai-toolbox/issues/1822)) ([38d535d](https://redirect.github.com/googleapis/genai-toolbox/commit/38d535de34cfedd6828a01d9dcd25daf1bad7306)) ([ea7c1d8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/ea7c1d85c2a6c33f6c428efc9befbdb95447f52a))
+
 ## [0.1.3](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.2...0.1.3) (2025-10-17)
 
 
