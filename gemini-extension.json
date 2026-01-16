@@ -28,7 +28,7 @@
       "envVar": "CLOUD_SQL_MSSQL_PROJECT"
     },
     {
-      "name": "Region",
+      "name": "Location",
       "description": "Region of the Cloud SQL instance",
       "envVar": "CLOUD_SQL_MSSQL_REGION"
     },
@@ -54,7 +54,7 @@
     },
     {
       "name": "IP Type",
-      "description": "(Optional) Type of the IP address (PUBLIC or PRIVATE)",
+      "description": "(Optional) Type of the IP address (PUBLIC, PRIVATE, or PSC)",
       "envVar": "CLOUD_SQL_MSSQL_IP_TYPE"
     }
   ]
