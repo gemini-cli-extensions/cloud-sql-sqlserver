@@ -38,7 +38,7 @@
       "envVar": "CLOUD_SQL_MSSQL_INSTANCE"
     },
     {
-      "name": "Database Name",
+      "name": "Database",
       "description": "Name of the database",
       "envVar": "CLOUD_SQL_MSSQL_DATABASE"
     },
