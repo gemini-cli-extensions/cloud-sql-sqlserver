@@ -34,7 +34,7 @@
     },
     {
       "name": "Instance",
-      "description": "Name of the Cloud SQL instance",
+      "description": "ID of the Cloud SQL instance",
       "envVar": "CLOUD_SQL_MSSQL_INSTANCE"
     },
     {
