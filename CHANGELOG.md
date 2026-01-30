@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.7](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.6...0.1.7) (2026-01-30)
+
+
+### Features
+
+* add Configuration settings ([#77](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/77)) ([f8ef9d3](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f8ef9d37900bd695768b377158cd5db542390533))
+* **deps:** update dependency googleapis/genai-toolbox to v0.26.0 ([#75](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/75)) ([f815e79](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f815e7986115fa314d38bf1c1b57db9c2fe7b3d1))
+
 ## [0.1.6](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.5...0.1.6) (2025-12-08)
 
 
