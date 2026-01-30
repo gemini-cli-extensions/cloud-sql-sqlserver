@@ -24,7 +24,7 @@
   "settings": [
     {
       "name": "Project Name",
-      "description": "ID of the Google Cloud project",
+      "description": "Name of the Google Cloud project",
       "envVar": "CLOUD_SQL_MSSQL_PROJECT"
     },
     {
@@ -33,7 +33,7 @@
       "envVar": "CLOUD_SQL_MSSQL_REGION"
     },
     {
-      "name": "Instance",
+      "name": "Instance ID",
       "description": "ID of the Cloud SQL instance",
       "envVar": "CLOUD_SQL_MSSQL_INSTANCE"
     },
