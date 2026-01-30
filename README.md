@@ -47,13 +47,13 @@ gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-sql
 
 You will be prompted to configure the following settings during installation. These settings are saved in an `.env` file within the extension's directory.
 
-*   `CLOUD_SQL_MSSQL_PROJECT`: The GCP project ID.
+*   `CLOUD_SQL_MSSQL_PROJECT`: The GCP project name.
 *   `CLOUD_SQL_MSSQL_REGION`: The region of your Cloud SQL instance.
 *   `CLOUD_SQL_MSSQL_INSTANCE`: The ID of your Cloud SQL instance.
 *   `CLOUD_SQL_MSSQL_DATABASE`: The name of the database to connect to.
 *   `CLOUD_SQL_MSSQL_USER`: The database username.
 *   `CLOUD_SQL_MSSQL_PASSWORD`: The password for the database user.
-*   `CLOUD_SQL_MSSQL_IP_TYPE`: (Optional) Type of the IP address: `PUBLIC` or `PRIVATE`. Defaults to `PUBLIC`.
+*   `CLOUD_SQL_MSSQL_IP_TYPE`: (Optional) Instance IP assignment: `PUBLIC`, `PRIVATE`, or `PSC`. Defaults to `PUBLIC`.
 
 > [!NOTE]
 > This configuration is primarily for the Data Plane tools (querying). The Admin toolset does not strictly require these to be pre-set if you provide them in your prompts, but it is recommended for a smoother experience.
@@ -79,7 +79,7 @@ export CLOUD_SQL_MSSQL_INSTANCE="<your-cloud-sql-instance-id>"
 export CLOUD_SQL_MSSQL_DATABASE="<your-database-name>"
 export CLOUD_SQL_MSSQL_USER="<your-database-user>"
 export CLOUD_SQL_MSSQL_PASSWORD="<your-database-password>"
-export CLOUD_SQL_MSSQL_IP_TYPE="PUBLIC" # Optional: `PUBLIC`, `PRIVATE`. Defaults to `PUBLIC`.
+export CLOUD_SQL_MSSQL_IP_TYPE="PUBLIC" # (Optional) Instance IP assignmentL `PUBLIC`, `PRIVATE`, `PSC`. Defaults to `PUBLIC`.
 ```
 
 > [!NOTE]
