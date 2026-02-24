@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.7...0.1.8) (2026-02-24)
+
+
+### Bug Fixes
+
+* remove broken keychain support for password ([#92](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/92)) ([01d1691](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/01d1691d7f683a2db3eaf5f63eb7f9b4b3a4b4f6))
+
 ## [0.1.7](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.6...0.1.7) (2026-01-30)
 
 
