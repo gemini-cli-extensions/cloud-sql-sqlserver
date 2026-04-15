@@ -247,7 +247,7 @@ The following skills are available in this repository:
 
 Find additional skills to support your entire software development lifecycle at [github.com/gemini-cli-extensions](https://github.com/gemini-cli-extensions), including:
 * [Generic SQL Server skills](https://github.com/gemini-cli-extensions/sql-server)
-* [Cloud SQL for SQL Server Observability skills](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability)
+* [Cloud SQL for SQL Server Observability extension](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability)
 * and more!
 
 ## Troubleshooting
