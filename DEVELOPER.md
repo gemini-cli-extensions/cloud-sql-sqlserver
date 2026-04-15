@@ -1,7 +1,7 @@
 # DEVELOPER.md
 
 This document provides instructions for setting up your development environment
-and contributing to the Cloud SQL for SQL Server Gemini CLI Extension project.
+and contributing to the Cloud SQL for SQL Server Agent skills project.
 
 ## Prerequisites
 
@@ -10,13 +10,12 @@ Before you begin, ensure you have the following:
 1.  **Gemini CLI:** Install the Gemini CLI version v0.6.0 or above. Installation
     instructions can be found on the official Gemini CLI documentation. You can
     verify your version by running `gemini --version`.
-2.  **Cloud SQL for SQL Server Instance:** For testing data plane tools, you will need access to an active Cloud SQL for SQL Server instance.
+2.  **Cloud SQL for SQL Server Instance:** For testing data plane tools, you will need access to an active Cloud SQL for SQL Server
+    instance.
 
 ## Developing the Extension
 
 ### Running from Local Source
-
-The core logic for this extension is handled by a pre-built `toolbox` binary. The development process involves installing the extension locally into the Gemini CLI to test changes.
 
 1.  **Clone the Repository:**
 
@@ -25,29 +24,16 @@ The core logic for this extension is handled by a pre-built `toolbox` binary. Th
     cd cloud-sql-sqlserver
     ```
 
-2.  **Download the Toolbox Binary:** The required version of the `toolbox` binary
-    is specified in `toolbox_version.txt`. Download it for your platform.
-
-    ```bash
-    # Read the required version
-    VERSION=$(cat toolbox_version.txt)
-
-    # Example for macOS/amd64
-    curl -L -o toolbox https://storage.googleapis.com/mcp-toolbox-for-databases/geminicli/v$VERSION/darwin/amd64/toolbox
-    chmod +x toolbox
-    ```
-    Adjust the URL for your operating system (`linux/amd64`, `darwin/arm64`, `windows/amd64`).
-
-3.  **Link the Extension Locally:** Use the Gemini CLI to install the
+2.  **Install the Extension Locally:** Use the Gemini CLI to install the
     extension from your local directory.
 
     ```bash
-    gemini extensions link .
+    gemini extensions install .
     ```
-    The CLI will prompt you to confirm the linking. Accept it to proceed.
+    The CLI will prompt you to confirm the installation. Accept it to proceed.
 
-4.  **Testing Changes:** After linking, start the Gemini CLI (`gemini`).
-    You can now interact with the `cloud-sql-sqlserver` tools to manually test your changes
+3.  **Testing Changes:** After installation, start the Gemini CLI (`gemini`).
+    You can now interact with the `cloud-sql-sqlserver` skills to manually test your changes
     against your connected database.
 
 ## Testing
@@ -58,9 +44,9 @@ A GitHub Actions workflow (`.github/workflows/presubmit-tests.yml`) is triggered
 for every pull request. This workflow primarily verifies that the extension can
 be successfully installed by the Gemini CLI.
 
-Currently, there are no automated unit or integration test suites
-within this repository. All functional testing must be performed manually. All tools
-are currently tested in the [MCP Toolbox GitHub](https://github.com/googleapis/mcp-toolbox).
+All tools are currently tested in the [MCP Toolbox GitHub](https://github.com/googleapis/mcp-toolbox).
+
+The skills themselves are validated using the `skills-validate.yml` workflow.
 
 ### Other GitHub Checks
 
@@ -72,7 +58,6 @@ are currently tested in the [MCP Toolbox GitHub](https://github.com/googleapis/m
     [Conventional Commits](https://www.conventionalcommits.org/) specification.
 *   **Dependency Updates:** [Renovate](https://github.com/apps/forking-renovate)
     is configured to automatically create pull requests for dependency updates.
-
 
 ## Maintainer Information
 
@@ -128,4 +113,3 @@ The process is handled by the [`mirror-changelog.yml`](.github/workflows/mirror-
 2.  **Merge Release PR:** A maintainer approves and merges the Release PR. This
     action triggers `release-please` to create a new GitHub tag and a
     corresponding GitHub Release.
-
