@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.2.0](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.8...0.2.0) (2026-04-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Add support for skills ([#104](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/104)) ([2bce334](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/2bce33426bf6adbaa53f5f4c56bec70988691b0c))
+
+### Features
+
+* **skill:** Attach user agent metadata for generated skill ([mcp-toolbox#​2697](https://redirect.github.com/googleapis/mcp-toolbox/issues/2697)) ([9598a6a](https://redirect.github.com/googleapis/mcp-toolbox/commit/9598a6a32597b9c9abdb0f20c06d86a01b0d011f)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* **skill:** Update skill generation logic ([mcp-toolbox#​2646](https://redirect.github.com/googleapis/mcp-toolbox/issues/2646)) ([c233eee](https://redirect.github.com/googleapis/mcp-toolbox/commit/c233eee98cd9621526cb286245f3874f5bd6e7da)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b)) ([mcp-toolbox#​2733](https://redirect.github.com/googleapis/mcp-toolbox/issues/2733)) ([5b85c65](https://redirect.github.com/googleapis/mcp-toolbox/commit/5b85c65960dba9bfaf4cadca6d44532a153976e1)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* **skills:** Add additional-notes flag to generate skills command ([mcp-toolbox#​2696](https://redirect.github.com/googleapis/mcp-toolbox/issues/2696)) ([73bf962](https://redirect.github.com/googleapis/mcp-toolbox/commit/73bf962459b76872f748248bb5e289be232a30b6)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* **skills:** Add Claude Code support to generated scripts ([mcp-toolbox#​2966](https://redirect.github.com/googleapis/mcp-toolbox/issues/2966)) ([a1609e1](https://redirect.github.com/googleapis/mcp-toolbox/commit/a1609e10a2eaf4ea68eae36acec3eed355b8a052)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* **skills:** Add codex user agent ([mcp-toolbox#​2973](https://redirect.github.com/googleapis/mcp-toolbox/issues/2973)) ([070e939](https://redirect.github.com/googleapis/mcp-toolbox/commit/070e9399c02f088d43175ce6bf343378beb7f584)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* **skills:** Tool invocation via npx ([mcp-toolbox#​2916](https://redirect.github.com/googleapis/mcp-toolbox/issues/2916)) ([377dc5b](https://redirect.github.com/googleapis/mcp-toolbox/commit/377dc5b00145a0044eef39314dd6b0ef5966fcd7)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* Add Claude plugin configuration ([#106](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/106)) ([80e70c6](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/80e70c6486f18a5602b544748b7d0ae8dcea972d))
+* Add Codex plugin configuration ([#107](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/107)) ([e4a1f12](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/e4a1f1295dfcc3fc0d06c429534746fcd04b73c2))
+* update repo name ([mcp-toolbox#​2968](https://redirect.github.com/googleapis/mcp-toolbox/issues/2968)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+
+
+### Bug Fixes
+
+* **skill:** Fix env variable propagation ([mcp-toolbox#​2645](https://redirect.github.com/googleapis/mcp-toolbox/issues/2645)) ([5271368](https://redirect.github.com/googleapis/mcp-toolbox/commit/52713687208994c423da64333cb0a04fb483f794)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* **skills:** Fix integer parameter parsing through agent skills ([mcp-toolbox#​2847](https://redirect.github.com/googleapis/mcp-toolbox/issues/2847)) ([4564efe](https://redirect.github.com/googleapis/mcp-toolbox/commit/4564efe75436b4081d9f3d1f7c912bc64c13f850)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* **skills:** Fix skill generation template ([mcp-toolbox#​2914](https://redirect.github.com/googleapis/mcp-toolbox/issues/2914)) ([a01a15e](https://redirect.github.com/googleapis/mcp-toolbox/commit/a01a15ed1aa9a83eda8362578fed2e3a3c8dde99)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+* **skills:** Prevent empty strings overriding optional env vars in node scripts ([mcp-toolbox#​2963](https://redirect.github.com/googleapis/mcp-toolbox/issues/2963)) ([c52adeb](https://redirect.github.com/googleapis/mcp-toolbox/commit/c52adeba76fc13d0e6e415f6393def0648e478d6)) ([f9e3fe8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/f9e3fe876ee5edeedcca7e3ddb95e0d7d001c01b))
+
 ## [0.1.8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.7...0.1.8) (2026-02-24)
 
 
