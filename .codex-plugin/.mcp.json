@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "cloud-sql-mssql": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@toolbox-sdk/server@1.9.0",
+        "--prebuilt",
+        "cloud-sql-mssql",
+        "--stdio"
+      ],
+      "env_vars": [
+        "CLOUD_SQL_MSSQL_PROJECT",
+        "CLOUD_SQL_MSSQL_REGION",
+        "CLOUD_SQL_MSSQL_INSTANCE",
+        "CLOUD_SQL_MSSQL_DATABASE",
+        "CLOUD_SQL_MSSQL_USER",
+        "CLOUD_SQL_MSSQL_PASSWORD",
+        "CLOUD_SQL_MSSQL_IP_TYPE"
+      ]
+    }
+  }
+}

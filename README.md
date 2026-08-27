@@ -1,9 +1,9 @@
-# Cloud SQL for SQL Server Agent Skills
+# Cloud SQL for SQL Server
 
 > [!NOTE]
 > This extension is currently in beta (pre-v1.0), and may see breaking changes until the first stable release (v1.0).
 
-This repository provides a set of agent skills to interact with [Cloud SQL for SQL Server](https://cloud.google.com/sql/docs/sqlserver) instances. These skills can be used with various AI agents, including [Antigravity](https://antigravity.google/), [Claude Code](https://claude.com/product/claude-code) and [Codex](https://developers.openai.com/codex), to manage your databases, execute queries, explore schemas, and troubleshoot issues using natural language prompts.
+This repository packages [MCP Toolbox](https://github.com/googleapis/mcp-toolbox)'s prebuilt `cloud-sql-mssql` server as a plugin/extension to interact with [Cloud SQL for SQL Server](https://cloud.google.com/sql/docs/sqlserver) instances. It can be used with various AI agents, including [Antigravity](https://antigravity.google/), [Claude Code](https://claude.com/product/claude-code) and [Codex](https://developers.openai.com/codex), to manage your databases, execute queries, explore schemas, and troubleshoot issues using natural language prompts.
 
 > [!IMPORTANT]
 > **We Want Your Feedback!**
@@ -14,7 +14,7 @@ This repository provides a set of agent skills to interact with [Cloud SQL for S
 
 ## Table of Contents
 
-- [Why Use Cloud SQL for SQL Server Agent Skills?](#why-use-cloud-sql-for-sql-server-agent-skills)
+- [Why Use Cloud SQL for SQL Server?](#why-use-cloud-sql-for-sql-server)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
   - [Configuration](#configuration)
@@ -22,14 +22,14 @@ This repository provides a set of agent skills to interact with [Cloud SQL for S
     - [Antigravity](#antigravity)
     - [Claude Code](#claude-code)
     - [Codex](#codex)
-- [Installing using open agent skills tool](#installing-using-open-agent-skills-tool)
 - [Installing via a compatible Agent Plugins client](#installing-via-a-compatible-agent-plugins-client)
 - [Usage Examples](#usage-examples)
-- [Supported Skills](#supported-skills)
+- [Available Tools](#available-tools)
+- [Generating Skills Instead](#generating-skills-instead)
 - [Additional Agent Skills](#additional-agent-skills)
 - [Troubleshooting](#troubleshooting)
 
-## Why Use Cloud SQL for SQL Server Agent Skills?
+## Why Use Cloud SQL for SQL Server?
 
 - **Seamless Workflow:** Integrates seamlessly into your AI agent's environment. No need to constantly switch contexts for common database tasks.
 - **Natural Language Queries:** Stop wrestling with complex commands. Explore schemas and query data by describing what you want in plain English.
@@ -46,6 +46,7 @@ Before you begin, ensure you have the following:
      - [Antigravity 2.0](https://antigravity.google/product/antigravity-2) version **v2.0.0** or higher.
   - [Claude Code](https://claude.com/product/claude-code) version **v2.1.94** or higher.
   - [Codex](https://developers.openai.com/codex) **v0.117.0** or higher.
+- [Node.js](https://nodejs.org/) — the MCP server runs via `npx`.
 - A Google Cloud project with the **Cloud SQL Admin API** enabled.
 - Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
 - IAM Permissions:
@@ -75,7 +76,7 @@ Please keep these env vars handy during the installation process:
 
 ### Installation & Usage
 
-To start interacting with your database, install the skills for your preferred AI agent, then launch the agent and use natural language to ask questions or perform tasks.
+To start interacting with your database, install the extension for your preferred AI agent, then launch the agent and use natural language to ask questions or perform tasks.
 
 For the latest version, check the [releases page][releases].
 
@@ -104,28 +105,18 @@ See <a href="https://antigravity.google/docs/gcli-migration">Migrating from Gemi
 
 #### Antigravity 2.0 (IDE)
 
-**1. Clone the Repo:**
+**1. Install the plugin:**
+
+Install the plugin directly from the remote GitHub repository:
 
 ```bash
-git clone --branch 0.2.0 https://github.com/gemini-cli-extensions/cloud-sql-sqlserver.git
+agy plugin install https://github.com/gemini-cli-extensions/cloud-sql-sqlserver
 ```
 
-**2. Install the skills:**
-
-Choose a location for the skills:
-- **Global (all workspaces):** `~/.gemini/antigravity/skills/`
-- **Workspace-specific:** `<workspace-root>/.agents/skills/`
-
-Copy the skill folders from the cloned repository's `skills/` directory to your chosen location:
-
-```bash
-cp -R cloud-sql-sqlserver/skills/* ~/.gemini/antigravity/skills/
-```
-
-**3. Set env vars:**
+**2. Set env vars:**
 Set your environment vars as described in the [configuration section](#configuration).
 
-_(Tip: Antigravity 2.0 automatically discovers skills in these directories at the start of a session. You can verify they are active by running the `/skills` command in your active session.)_
+_(Tip: You can verify the MCP server is active by running the `/mcp` command in your active session.)_
 
 #### Antigravity CLI
 
@@ -160,8 +151,7 @@ claude
 /plugin install cloud-sql-sqlserver@claude-plugins-official
 ```
 
-_(Tip: Run `/plugin list` inside Claude Code to verify the plugin is active, or `/reload-plugins` if you just installed it.)_
-
+_(Tip: Run `/plugin list` inside Claude Code to verify the plugin is active, or `/reload-plugins` if you just installed it.)
 </details>
 
 <details>
@@ -189,23 +179,7 @@ codex plugin marketplace upgrade data-agent-kit
 
 </details>
 
-## Installing using [open agent skills tool](https://github.com/vercel-labs/skills)
-
-You can install skills using the `npx skills` command.
-
-**1. Install the skills:**
-
-Run the following command in your terminal to automatically download and register the skills:
-
-```bash
-npx skills add https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/tree/0.2.0
-```
-
-For detailed info check out the [Skills npm package](https://www.npmjs.com/package/skills).
-
-**2. Set env vars:**
-Set your environment vars as described in the [configuration section](#configuration).
-
+## Installing via a compatible Agent Plugins client
 ## Installing via a compatible Agent Plugins client
 
 This repository is a valid [Agent Plugins](https://github.com/agentplugins/agent-plugins-spec) (v1) plugin. Any [Agent Plugins–compatible client](https://agent-plugins.org/compatible-clients) can install it directly using its own built-in plugin command — no extra tooling required — by pointing at this repository:
@@ -235,14 +209,41 @@ Interact with Cloud SQL for SQL Server using natural language:
 - **Generate Code:**
   - "Generate a Python dataclass to represent the 'customers' table."
 
-## Supported Skills
+## Available Tools
 
-The following skills are available in this repository:
+The tools come from MCP Toolbox's prebuilt `cloud-sql-mssql` server, grouped into toolsets:
 
-- [Cloud SQL for SQL Server Admin](./skills/cloud-sql-sqlserver-admin/SKILL.md) - Use these skills when you need to provision new Cloud SQL for SQL Server instances, create databases and users, clone existing environments, and monitor the progress of long-running operations.
-- [Cloud SQL for SQL Server Data](./skills/cloud-sql-sqlserver-data/SKILL.md) - Use these skills when you need to explore the database schema, execute SQL queries to interact with your data, and monitor system-level performance metrics using PromQL queries.
-- [Cloud SQL for SQL Server Lifecycle](./skills/cloud-sql-sqlserver-lifecycle/SKILL.md) - Use these skills when you need to manage the lifecycle and durability of your data, including creating backups, restoring from existing backups, and cloning instances for testing or migration.
-- [Cloud SQL for SQL Server Monitor](./skills/cloud-sql-sqlserver-monitor/SKILL.md) - Use these skills when you need to troubleshoot slow queries and analyze system-level PromQL metrics.
+- **admin** - Use these tools when you need to provision new Cloud SQL for SQL Server instances, create databases and users, and monitor the progress of long-running operations.
+- **data** - Use these tools when you need to explore the database schema and execute SQL queries to interact with your data.
+- **monitor** - Use these tools when you need to troubleshoot slow queries and analyze system-level PromQL metrics.
+- **lifecycle** - Use these tools when you need to manage the lifecycle and durability of your data, including creating backups, restoring from existing backups, and cloning instances for testing or migration.
+
+For the full, up-to-date list, see the [`cloud-sql-mssql` prebuilt config](https://github.com/googleapis/mcp-toolbox/blob/main/internal/prebuiltconfigs/tools/cloud-sql-mssql.yaml)
+in the MCP Toolbox repository.
+
+## Generating Skills Instead
+
+The tool-backed skills this plugin used to ship were generated from the same prebuilt
+toolsets. If your agent lacks deferred tool loading, or you prefer skills, regenerate
+them with the script in this repository:
+
+```bash
+VERSION=<toolbox version> ./.github/scripts/generate_skills.sh
+```
+
+Use the toolbox version pinned in [`mcp.json`](./mcp.json). A single toolset, without
+the script:
+
+```bash
+npx @toolbox-sdk/server@<toolbox version> --prebuilt cloud-sql-mssql skills-generate \
+  --name "<skill name>" \
+  --toolset "<toolset>" \
+  --description "<what it is for>"
+```
+
+The generated scripts call the toolbox through `npx`, so no binary download is needed.
+See [Generate Agent Skills](https://github.com/googleapis/mcp-toolbox#generate-agent-skills)
+in the MCP Toolbox repository.
 
 ## Additional Agent Skills
 
