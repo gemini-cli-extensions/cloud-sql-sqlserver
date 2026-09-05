@@ -5,7 +5,7 @@
     "email": "data-cloud-ai-integrations@google.com"
   },
   "metadata": {
-    "description": "Agent skills for Cloud SQL for SQL Server to query, manage, and monitor databases."
+    "description": "Connect to and interact with a Cloud SQL for SQL Server database."
   },
   "plugins": [
     {
