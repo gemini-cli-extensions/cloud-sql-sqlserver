@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cloud-sql-sqlserver",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Connect to Cloud SQL for SQL Server",
   "author": {
     "name": "Google LLC",

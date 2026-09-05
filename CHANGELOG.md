@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.2.0...0.2.1) (2026-09-05)
+
+
+### Features
+
+* **plugin:** migrate from generated skills to the prebuilt MCP server ([#126](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/126)) ([8858b0f](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/8858b0fd066f1590ab7dad70ceacb1366af86a1f))
+* **plugin:** support agent plugin spec ([#124](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/issues/124)) ([9e4e899](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/commit/9e4e8990a4cd99ac39aac97189f8456a7fd10446))
+
 ## [0.2.0](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver/compare/0.1.8...0.2.0) (2026-04-16)
 
 
